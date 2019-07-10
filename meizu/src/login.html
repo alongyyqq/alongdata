@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <!-- 登录内容 -->
+    <div id="content" class="content">
+        <div class="ucSimpleHeader" id="header">
+            <a href="http://www.meizu.com" class="meizuLogo"><i class="i_icon"></i></a>
+
+        </div>
+        <div class="banner-box">
+            <div class="bg-box">
+                <form id="mainForm" class="main-form" enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+
+                    <div class="tab-title">
+                        <a class="linkABlack" id="toAccountLogin" href="javascript:void(0);">账号登录</a>
+                        <span class="register-line"></span>
+                        <a class="linkAGray" id="toVCodeLogin" href="javascript:void(0);">二维码登录</a>
+                    </div>
+                    <div class="tip-box visiblility-hidden">
+                        <i class="err-ico"></i>
+                        <span class="tip-font"></span>
+                        <span class="close-ico"></span>
+                    </div>
+                    <div class="normalInput cycode-box fieldInput" id="cycode-box">
+                        <div class="cycode-selectbox">
+                            <span class="cycode-selected">
+                                            <input class="ipt-cycode" readonly="" id="cycode" value="+86" name="cycode">
+                                            <i class="arrow-down"></i>
+                                        </span>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div id="cycode-container" class="cycode-container">
+
+                        </div>
+                    </div>
+                    <div class="normalInput fieldInput">
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="rememberField">
+                        <span class="mzchkbox"><span class="checkboxPic check_unchk"><i class="i_icon"></i></span><input name="remember" id="remember" type="checkbox" value="1" style="display: none;"></span>
+                        <label for="remember" tabindex="0">记住登录状态</label>
+
+                    </div>
+                    <input type="submit" value="登录" name="submit" class="fullBtnBlue">
+                    <div class="transferField">
+                        <a class="go2forgetpwd linkABlue rememberFieldForA" href="https://i.flyme.cn/forgetpwd" target="_Blank">忘记密码?</a>
+                        <a class="go2register linkABlue" href="http://localhost/alongdata/meizu/src/registor.html" id="toRegister">注册</a>
+                    </div>
+                    <a href="javascript:void(0)" id="qr-btn" class="qr-btn"></a>
+                    <div id="qr-panel" class="qr-panel hide">
+                        <div class="qr-img-box">
+                            <img alt="">
+                        </div>
+                        <p class="tips">请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+                        <p class="qr-success-tips hide">扫描成功，请在手机点击“确认登录”</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/thirdplugins/jquery.min.js"></script>
+    <script src="script/js/login.js"></script>
+
+
+</body>
+
+</html>
