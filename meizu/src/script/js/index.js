@@ -81,7 +81,7 @@ new Meizu().init();
                                 <a class="box-img box-img-retina" href="details.html?sid=${value.picid}" target="_blank"  >
                                     <img class="goods-img lazy-img" data-img="https://openfile.meizu.com/group1/M00/07/12/Cgbj0Vx_ZK6AaEObAAa1DJqn7us376.png" src="${value.url}">
                                     <span class="box-info">
-                                            <span class="goods-name">${value.tittle}</span>
+                                            <span class="goods-name">${value.title}</span>
                                     <span class="goods-desc">${value.titleb}</span>
                                     <span class="goods-price"> <i>￥</i>${value.price}<em></em> </span>
                                     </span>

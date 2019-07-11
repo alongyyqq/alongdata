@@ -8,214 +8,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/details.css">
 
-    <style type="text/css">
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        ul,
-        ol,
-        li {
-            list-style: none;
-        }
-        
-        input {
-            border: 0;
-        }
-        
-        .wrap {
-            float: left;
-            position: relative;
-        }
-        
-        #spic {
-            width: 400px;
-            height: 400px;
-            border: 1px solid #000;
-            float: left;
-            position: relative;
-        }
-        
-        #spic img {
-            width: 400px;
-            height: 400px;
-        }
-        
-        #sf {
-            width: 50px;
-            height: 50px;
-            background: orange;
-            opacity: 0.3;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            visibility: hidden;
-        }
-        
-        #bf {
-            width: 400px;
-            height: 500px;
-            border: 1px solid #000;
-            overflow: hidden;
-            position: absolute;
-            left: 410px;
-            visibility: hidden;
-            z-index: 100;
-        }
-        
-        #bf img {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 800px;
-            height: 800px;
-        }
-        
-        #ulist {
-            position: absolute;
-            left: 0px;
-            top: 430px;
-            width: 402px;
-            height: 56px;
-            overflow: hidden;
-        }
-        
-        #ulist a {
-            float: left;
-            width: 10px;
-            height: 54px;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            line-height: 56px;
-            text-align: center;
-            background: #fff;
-        }
-        
-        #list {
-            float: left;
-            margin-left: 18px;
-            width: 372px;
-            position: relative;
-        }
-        
-        .wrap ul {
-            list-style: none;
-            float: left;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-        
-        .wrap ul li {
-            float: left;
-            width: 56px;
-            height: 56px;
-            padding-right: 6px;
-        }
-        
-        .wrap ul li img {
-            width: 52px;
-            height: 52px;
-            border: 1px solid #ccc;
-        }
-        
-        #right {
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            color: #333;
-        }
-        
-        #left {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 2;
-            color: #fff;
-        }
-        
-        .goodsinfo {
-            margin: 100px 0 0 100px;
-        }
-        
-        .goodsinfo-img {
-            width: 200px;
-            height: 200px;
-            float: left;
-        }
-        
-        .goodsinfo-img img {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .goodsinfo-word {
-            overflow: hidden;
-            float: left;
-        }
-        
-        .p-name {
-            width: 350px;
-            height: 50px;
-            margin-left: 50px;
-            margin-top: 20px;
-        }
-        
-        .p-name .loadtitle {
-            font: 16px "微软雅黑";
-            color: #666666;
-        }
-        
-        .p-price {
-            margin-left: 50px;
-            margin-top: 10px;
-            width: 300px;
-            height: 50px;
-            background: rgba(183, 183, 183, 0.4);
-            line-height: 50px;
-        }
-        
-        .p-btn {
-            margin-top: 20px;
-        }
-        
-        .p-btn input {
-            display: inline-block;
-            width: 50px;
-            height: 46px;
-            font-size: 20px;
-            font-family: "微软雅黑";
-            color: black;
-            margin-left: 50px;
-            border: 1px solid gray;
-            float: left;
-        }
-        
-        .p-btn a {
-            display: block;
-            width: 100px;
-            height: 50px;
-            background-color: red;
-            font-size: 16px;
-            font-family: "微软雅黑";
-            color: white;
-            line-height: 50px;
-            text-align: center;
-            float: left;
-            margin-left: 10px;
-        }
-    </style>
+
 </head>
 
 <body>
-    <main class="wrapper page-sku">
 
-        <div class="fast-nav anim --fixed" id="J_fastNav">
+
+    <!-- 商品的详细信息 -->
+    <main class="wrapper page-sku">
+        <!-- 标题 -->
+        <div class="fast-nav anim" id="J_fastNav">
+
+            <!-- 操作的盒子 -->
             <div class="-container">
                 <ul class="-ulist">
                     <li class="-item">
@@ -229,72 +33,361 @@
                     </li>
                 </ul>
                 <span class="-name">
-                            魅族 Note9
-                        </span>
+                        魅族 Note9
+                    </span>
             </div>
         </div>
-        <div class="goodsinfo">
-            <div class="wrap">
-                <div id="spic">
-                    <img src="" alt="" id="smallpic">
-                    <div id="sf"></div>
+        <section class="row container">
+            <div class="preview" id="preview">
+                <!-- 详情页大图的盒子 -->
+                <div class="preview-booth">
+                    <a href="javascript:;" id="J_imgBooth">
+                        <img src="" height="560" width="560" alt="">
+                        <div id="sf"></div>
+                    </a>
                 </div>
                 <div id="bf">
-                    <img src="" alt="" id="bpic">
+                    <img src="" height="560" width="560" alt="" id="bpic">
                 </div>
-                <div id="ulist">
-                    <a href="javascript:;" id="left">&lt;</a>
-                    <div id="list">
-                        <ul>
+                <ul class="preview-thumb clearfix" id="J_previewThumb">
+                    <!-- 详情页小图片的盒子 -->
 
-                        </ul>
+                </ul>
+                <div class="preview-action">
+
+                    <a class="vm-favorite" data-mtype="store_de_favorite" data-bh="click_store_de_favorite" id="J_favorite" href="javascript:;"><i class="iconfont icon-favorite"></i>收藏 </a>
+                    <a class="compare-btn-list" id="J_compare" data-mtype="store_de_compare" data-bh="click_store_de_compare"><i class="iconfont icon-duibi compare-duibi"></i><span>对比</span></a>
+                </div>
+            </div>
+            <div class="property" id="property">
+                <!-- 标题渲染 -->
+                <div class="property-hd">
+                    <h1>魅族 Note9</h1>
+                    <!-- 手机详情介绍 -->
+                    <p class="mod-info active">【限时6期免息】【低至1199元起】 骁龙675 | 后置4800万 | 前置2000万 | 独家定制水滴设计全面屏 | 4000mAh大容量电池 | 18W mCharge快充 | 吃鸡不卡 拍她更美</p>
+                </div>
+
+
+
+                <div class="property-sell">
+                    <div class="property-sell-price clearfix">
+                        <div class="mod-price">
+                            <small>¥</small>
+                            <!-- 价格 -->
+                            <span id="J_price" class="vm-money">1199.00</span>
+                        </div>
+                        <div class="mod-original" id="J_originalPrice" style="display:none;"></div>
                     </div>
-                    <a href="javascript:;" id="right">&gt;</a>
+                    <dl class="property-sell-app clearfix" id="J_propertySellAppPrice" style="display: none">
+                        <dt class="vm-entry" id="J_appTag">
+                                <span>APP专享</span>
+                            </dt>
+                        <dd class="mod-app-tip" id="J_appTip">
+                            APP下单省<span id="J_appPrice" class="vm-money">0</span>元
+                        </dd>
+                    </dl>
+                    <dl class="property-sell-coupon clearfix" id="J_prodPromo" style="display:none;">
+                        <dt class="vm-entry">
+                                <span>优惠券</span>
+                            </dt>
+                        <dd>
+                            <p id="J_promoInner">
+                            </p>
+                            <a class="vm-more" data-mtype="store_de_coupon_more" data-bh="click_store_de_coupon_more" id="J_promoMore" href="#">更多 &gt;</a>
+                        </dd>
+                    </dl>
+                    <dl class="property-sell-morebuy clearfix" id="J_prodMorebuy" style="">
+                        <dt class="vm-entry">
+                                <span>加价购</span>
+                            </dt>
+                        <dd>
+                            <span>
+                                                        另加<em id="J_moreBuyStart">19</em>元起，即可换购超值商品
+                                                    </span>
+                            <a class="vm-more" data-mtype="store_de_coupon_more" data-bh="click_store_de_coupon_more" id="J_moreBuyEnter" href="#">立即加购 &gt;</a>
+                        </dd>
+                    </dl>
+                    <dl class="property-sell-gift clearfix" id="J_prodGift" style="display:none;">
+                        <dt class="vm-entry">
+                                <span>赠品</span>
+                            </dt>
+                        <dd>
+                        </dd>
+                    </dl>
                 </div>
-            </div>
-            <div class="goodsinfo-word">
-                <div class="p-name">
-                    <a class="loadtitle" href="##"></a>
+
+
+                <div class="property-service">
+                    <dl class="property-service-item clearfix">
+                        <dt class="vm-metatit">支<span class="s-space"></span><span class="s-space"></span>持
+                            </dt>
+                        <dd class="mod-bd" id="J_prodService">
+                            <span><i class="iconfont-detail icon-success"></i>花呗分期</span>
+
+                            <span><i class="iconfont-detail icon-success"></i>顺丰发货</span>
+                            <span><i class="iconfont-detail icon-success"></i>7天无理由退货</span>
+                        </dd>
+                    </dl>
+                    <!--去掉百城速达判断-->
+                    <dl class="property-service-suda clearfix" id="J_delivery">
+                        <dt class="vm-metatit">配送服务</dt>
+                        <dd class="mod-site clearfix">
+                            <div id="site-selector" class="site-selector">
+                                <div class="text">浙江省 杭州市 <i class="iconfont-detail icon-yijianfankuixialajiantou"></i></div>
+                                <div class="content">
+                                    <div class="JD-stock-con">
+                                        <div data-widget="tabs" class="m JD-stock" id="JD-stock">
+                                            <div class="mt">
+                                                <ul class="tab">
+                                                    <li data-index="0" data-widget="tab-item" class="" style="display: list-item;"><a href="#none" title="浙江省"><em>浙江省</em><i></i></a></li>
+                                                    <li data-index="1" data-widget="tab-item" style=""><a href="#none" title="杭州市"><em>杭州市</em><i></i></a></li>
+                                                    <li data-index="2" data-widget="tab-item" style="" class="curr"><a href="#none" title="请选择"><em>请选择</em><i></i></a></li>
+                                                    <li data-index="3" data-widget="tab-item" style="display:none;"><a href="#none"><em></em><i></i></a></li>
+                                                </ul>
+                                                <div class="stock-line"></div>
+                                            </div>
+                                            <div class="mc" data-area="0" data-widget="tab-content" id="site-province-item" style="display: none;">
+                                                <ul class="area-list">
+                                                    <li><a href="#none" data-value="2911">北京</a></li>
+                                                    <li><a href="#none" data-value="14848">天津</a></li>
+                                                    <li><a href="#none" data-value="7450">吉林</a></li>
+                                                    <li><a href="#none" data-value="8452">辽宁</a></li>
+                                                    <li><a href="#none" data-value="16860">浙江</a></li>
+                                                    <li><a href="#none" data-value="1">福建</a></li>
+                                                    <li><a href="#none" data-value="16624">上海</a></li>
+                                                    <li><a href="#none" data-value="18482">广东</a></li>
+                                                    <li><a href="#none" data-value="21612">海南</a></li>
+                                                    <li><a href="#none" data-value="41143">湖北</a></li>
+                                                    <li><a href="#none" data-value="42634">湖南</a></li>
+                                                    <li><a href="#none" data-value="36793">安徽</a></li>
+                                                    <li><a href="#none" data-value="15121">江苏</a></li>
+                                                    <li><a href="#none" data-value="1214">江西</a></li>
+                                                    <li><a href="#none" data-value="27304">四川</a></li>
+                                                    <li><a href="#none" data-value="35714">重庆</a></li>
+                                                    <li><a href="#none" data-value="34187">云南</a></li>
+                                                    <li><a href="#none" data-value="23366">贵州</a></li>
+                                                    <li><a href="#none" data-value="20238">广西</a></li>
+                                                    <li><a href="#none" data-value="32166">西藏</a></li>
+                                                    <li><a href="#none" data-value="11241">山东</a></li>
+                                                    <li><a href="#none" data-value="38498">河南</a></li>
+                                                    <li><a href="#none" data-value="21894">甘肃</a></li>
+                                                    <li><a href="#none" data-value="3251">河北</a></li>
+                                                    <li><a href="#none" data-value="10088">内蒙古</a></li>
+                                                    <li><a href="#none" data-value="25024">宁夏</a></li>
+                                                    <li><a href="#none" data-value="25305">青海</a></li>
+                                                    <li><a href="#none" data-value="13289">山西</a></li>
+                                                    <li><a href="#none" data-value="25761">陕西</a></li>
+                                                    <li><a href="#none" data-value="32939">新疆</a></li>
+                                                    <li><a href="#none" data-value="5700">黑龙江</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mc" data-area="1" data-widget="tab-content" id="site-city-item" style="display: none;">
+                                                <ul class="area-list">
+                                                    <li><a href="#none" data-value="16861">杭州市</a></li>
+                                                    <li><a href="#none" data-value="17072">湖州市</a></li>
+                                                    <li><a href="#none" data-value="17146">嘉兴市</a></li>
+                                                    <li><a href="#none" data-value="17227">衢州市</a></li>
+                                                    <li><a href="#none" data-value="17343">丽水市</a></li>
+                                                    <li><a href="#none" data-value="17535">金华市</a></li>
+                                                    <li><a href="#none" data-value="17697">宁波市</a></li>
+                                                    <li><a href="#none" data-value="17861">舟山市</a></li>
+                                                    <li><a href="#none" data-value="17909">绍兴市</a></li>
+                                                    <li><a href="#none" data-value="18035">台州市</a></li>
+                                                    <li><a href="#none" data-value="18179">温州市</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mc" data-area="2" data-widget="tab-content" id="site-area-item" style="display: block;">
+                                                <ul class="area-list">
+                                                    <li><a href="#none" data-value="16862">上城区</a></li>
+                                                    <li><a href="#none" data-value="16869">下城区</a></li>
+                                                    <li><a href="#none" data-value="16878">江干区</a></li>
+                                                    <li><a href="#none" data-value="16889">拱墅区</a></li>
+                                                    <li><a href="#none" data-value="16900">西湖区</a></li>
+                                                    <li><a href="#none" data-value="16913">滨江区</a></li>
+                                                    <li><a href="#none" data-value="16917">萧山区</a></li>
+                                                    <li><a href="#none" data-value="16944">余杭区</a></li>
+                                                    <li><a href="#none" data-value="16965">桐庐县</a></li>
+                                                    <li><a href="#none" data-value="16979">淳安县</a></li>
+                                                    <li><a href="#none" data-value="17003">建德市</a></li>
+                                                    <li><a href="#none" data-value="17020">富阳区</a></li>
+                                                    <li><a href="#none" data-value="17045">临安市</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mc" data-area="3" data-widget="tab-content" id="site-town-item" style="display: none;"></div>
+                                        </div>
+                                    </div><span class="vm-close"></span></div>
+                            </div>
+                            <div class="site-status" id="J_siteStatus"></div>
+                        </dd>
+                    </dl>
+                    <!---->
+                    <div class="property-service-provider clearfix">
+                        <span id="J_installmentInfo"></span> 本商品由 魅族 负责发货并提供售后服务
+                        <a class="vm-kefu" style="" data-mtype="store_de_kefu" data-bh="click_store_de_kefu" id="J_kefu" href="javascript:;"><i class="iconfont-detail icon-kefu"></i><span>商城客服</span></a>
+                    </div>
                 </div>
-                <div class="p-price"><strong><em>￥</em><i class="loadpcp"></i></strong></div>
-                <div class="p-btn">
-                    <input type="text" id="count" value="1" />
-                    <a href="http://localhost/alongdata/meizu/src/cart.html">加入购物车</a>
+
+                <div class="property-sibling">
+                    <dl data-property="型号" class="property-sibling-item">
+                        <dt class="vm-metatit">
+                                型<span class="s-space"></span><span class="s-space"></span>号
+                            </dt>
+                        <dd class="clearfix">
+                            <a href="javascript:;" data-itemid="12480" class="prop selected" data-mtype="store_de_sib_1" data-bh="click_store_de_sib_1">魅族 Note9</a>
+                            <a href="//detail.meizu.com/item/meizu16s.html?click=store_de_sib_2" data-itemid="12494" class="prop" data-mtype="store_de_sib_2" data-bh="click_store_de_sib_2">魅族 16s</a>
+                            <a href="//detail.meizu.com/item/meizu16th.html?click=store_de_sib_3" data-itemid="12213" class="prop" data-mtype="store_de_sib_3" data-bh="click_store_de_sib_3">魅族 16th</a>
+                            <a href="//detail.meizu.com/item/meizu16thplus.html?click=store_de_sib_4" data-itemid="12214" class="prop" data-mtype="store_de_sib_4" data-bh="click_store_de_sib_4">魅族 16th Plus</a>
+                            <a href="//detail.meizu.com/item/meizu16x.html?click=store_de_sib_5" data-itemid="12393" class="prop" data-mtype="store_de_sib_5" data-bh="click_store_de_sib_5">魅族 16 X</a>
+                            <a href="//detail.meizu.com/item/meizu16xs.html?click=store_de_sib_6" data-itemid="12526" class="prop" data-mtype="store_de_sib_6" data-bh="click_store_de_sib_6">魅族 16Xs</a>
+                        </dd>
+                    </dl>
                 </div>
-            </div>
-        </div>
-        <div class="layer-promo" id="layerPromo" style="display:none;">
-            <div class="layer-promo-hd">
-                领取优惠券
-                <a class="vm-close" id="J_promoClose" href="#">
-                            ╳
+                <div class="property-set">
+                    <dl class="property-set-sale" data-property="网络类型">
+                        <dt class="vm-metatit">网络类型</dt>
+                        <dd class="clearfix">
+                            <a data-value="14:18238" data-mtype="store_de_sp_1_1" data-bh="click_store_de_sp_1_1" href="#" title="全网通公开版" class="selected">
+                                <span>全网通公开版</span>
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="property-set-sale" data-property="颜色分类">
+                        <dt class="vm-metatit">颜色分类</dt>
+                        <dd class="clearfix">
+                            <a data-value="3:33168" class="vm-sale-img selected" data-mtype="store_de_sp_2_1" data-bh="click_store_de_sp_2_1" href="#" title="幻黑">
+                                <img src="//openfile.meizu.com/group1/M00/07/12/Cgbj0Vx_ZK6AaEObAAa1DJqn7us376.png80x80.png" width="32" height="32">
+                                <span>幻黑</span>
+                            </a>
+                            <a data-value="3:33169" class="vm-sale-img" data-mtype="store_de_sp_2_2" data-bh="click_store_de_sp_2_2" href="#" title="皓白">
+                                <img src="//openfile.meizu.com/group1/M00/07/02/Cgbj0Fx_ZKSATnTJAAU3Ca8M6D8964.png80x80.png" width="32" height="32">
+                                <span>皓白</span>
+                            </a>
+                            <a data-value="3:33170" class="vm-sale-img" data-mtype="store_de_sp_2_3" data-bh="click_store_de_sp_2_3" href="#" title="星耀蓝">
+                                <img src="//openfile.meizu.com/group1/M00/07/03/Cgbj0Fx_ZMCAdyF9AAbOHZSdVO8974.png80x80.png" width="32" height="32">
+                                <span>星耀蓝</span>
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="property-set-sale" data-property="内存容量">
+                        <dt class="vm-metatit">内存容量</dt>
+                        <dd class="clearfix">
+                            <a data-value="13:28258" data-mtype="store_de_sp_3_1" data-bh="click_store_de_sp_3_1" href="#" title="4+64GB" class="selected">
+                                <span>4+64GB</span>
+                            </a>
+                            <a data-value="13:23963" data-mtype="store_de_sp_3_2" data-bh="click_store_de_sp_3_2" href="#" title="6+64GB">
+                                <span>6+64GB</span>
+                            </a>
+                            <a data-value="13:33171" data-mtype="store_de_sp_3_3" data-bh="click_store_de_sp_3_3" href="#" title="4+128GB">
+                                <span>4+128GB</span>
+                            </a>
+                        </dd>
+                    </dl>
+                    <dl class="property-set-package" id="propertyPackage" data-property="套餐">
+                        <dt class="vm-metatit">选择套餐</dt>
+                        <dd class="package">
+                            <div class="package-tab clearfix" id="J_packageTab" data-property="套餐">
+                                <a data-value="0" data-mtype="click_store_de_tc_1" data-bh="click_store_de_tc_1" href="#" title="官方标配" class="selected single">
+                                    <p class="vm-text ">
+                                        官方标配
+
+                                    </p>
+                                </a>
+
+                                <a data-value="303" data-mtype="click_store_de_tc_2" data-bh="click_store_de_tc_2" href="#" title="EP21套餐">
+                                    <p class="vm-text ">
+                                        EP21套餐
+
+
+
+                                        <span class="vm-text-profits">省<em>30</em>元</span>
+
+
+
+                                    </p>
+                                </a>
+
+                                <a data-value="304" data-mtype="click_store_de_tc_3" data-bh="click_store_de_tc_3" href="#" title="EP52套餐">
+                                    <p class="vm-text ">
+                                        EP52套餐
+
+
+
+                                        <span class="vm-text-profits">省<em>120</em>元</span>
+
+
+
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="package-content hide" id="J_packageContent" style="display: none;">
+                                <span class="s-triangle" id="J_triangle" style="display: block; left: 88px;"></span>
+                                <div class="mod-bd" id="J_packageBody"></div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="property-huabei clearfix">
+                    <div class="vm-metatit">
+                        花呗分期
+                        <a href="//hd.meizu.com/rules/huabei.html" target="_blank" class="vm-desc">
+                            <i class="iconfont-detail icon-wenhao"></i>
                         </a>
-            </div>
-            <div class="layer-promo-bd">
-                <dl class="discount-coupon" id="J_discountCoupon">
-                </dl>
-            </div>
-        </div>
-        <section class="simple row" id="simple">
-            <div class="simple-hd container">
-                商品详情
-            </div>
+                    </div>
+                    <div class="clearfix property-huabei-bd" id="J_huabeiBody">
 
+                        <a data-value="3" class="prop" data-mtype="store_de_hb_3" data-bh="click_store_de_hb_3">
+                            <span class="vm-periods">¥399.66×3期</span>
+                            <span class="vm-rate">免手续费</span>
+                        </a>
+                        <a data-value="6" class="prop" data-mtype="store_de_hb_6" data-bh="click_store_de_hb_6">
+                            <span class="vm-periods">¥199.83×6期</span>
+                            <span class="vm-rate">免手续费</span>
+                        </a>
+                        <a data-value="12" class="prop" data-mtype="store_de_hb_12" data-bh="click_store_de_hb_12">
+                            <span class="vm-periods">¥107.40×12期</span>
+                            <span class="vm-rate">含手续费 ￥7.49/期</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="property-buy">
+                    <p class="vm-message" id="J_message"></p>
+                    <dl class="property-buy-quantity">
+                        <dt class="vm-metatit">数<span class="s-space"></span><span class="s-space"></span>量
+                            </dt>
+                        <dd class="clearfix">
+                            <div class="mod-control">
+                                <a title="减少" href="javascript:;" class="vm-minus disabled">-</a>
+                                <input type="text" value="1" id="J_quantity" data-max="5">
+                                <a title="增加" href="javascript:;" class="vm-plus">+</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="property-buy-action">
 
-
+                        <a data-mtype="store_de_buy" data-bh="click_store_de_buy" href="javascript:void(0);" id="J_btnBuy" class="btn btn-primary btn-lg mr20" style="display: inline-block;">立即购买</a>
+                        <a data-mtype="store_de_cart" data-bh="click_store_de_cart" href="javascript:void(0);" id="J_btnAddCart" class="btn btn-empty btn-lg hide" style="display: inline-block;"><i></i>加入购物车</a>
+                        <a href="javascript:void(0);" data-mtype="store_de_remind" data-bh="click_store_de_remind" id="J_btnRemind" class="btn btn-empty btn-lg hide" style="display: none;"><i></i>开售提醒</a>
+                        <span class="vm-service" id="J_panicBuyingWrap"></span>
+                    </div>
+                </div>
+                <div class="prod-addition">
+                    <input type="hidden" id="servertime" value="1562826085787">
+                </div>
+            </div>
         </section>
-        <section class="detail-recommend" id="detailRecommend">
-        </section>
-
-
 
     </main>
+
+
+
+
+
+
+
 
     <script src="script/thirdplugins/jquery.min.js"></script>
     <script src="script/thirdplugins/jquery.cookie.js"></script>
     <script src="script/js/details.js"></script>
-
-
 </body>
 
 </html>

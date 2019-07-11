@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".fullBtnBlue").click(function(){var a=$("#username").val(),e=$("#password").val();$.ajax({type:"post",url:"http://localhost/alongdata/meizu/php/login.php",data:{user:a,pass:e}}).success(function(a){console.log(a),a?(alert(2),location.href="indexss.html",localStorage.setItem("successname",username.value)):alert("用户名或密码有误")})})});

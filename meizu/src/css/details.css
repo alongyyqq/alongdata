@@ -3742,7 +3742,6 @@ _:-ms-lang(x) {
     }
 }
 
-@charset "UTF-8";
 .iconfont,
 .iconfont-detail {
     -moz-osx-font-smoothing: grayscale
@@ -4531,6 +4530,7 @@ _:-ms-lang(x) {
 
 .preview .preview-thumb {
     overflow: hidden;
+    height: 107px;
     margin-top: 10px;
     margin-left: 24px
 }
@@ -7099,4 +7099,22 @@ textarea:focus {
     font-size: 12px;
     line-height: 40px;
     text-align: center
+}
+
+#sf {
+    background: orange;
+    opacity: 0.3;
+    position: absolute;
+    visibility: hidden;
+}
+
+#bf {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: absolute;
+    left: 410px;
+    visibility: hidden;
+    z-index: 100;
 }

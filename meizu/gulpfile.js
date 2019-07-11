@@ -3,11 +3,10 @@ const htmlmin = require('gulp-minify-html'); //引入html压缩
 const minicss = require('gulp-minify-css');
 const imagemin = require('gulp-imagemin');
 const watch = require('gulp-watch');
-const babel = require('gulp-babel@7');
+const babel = require('gulp-babel');
 const es2015 = require('babel-preset-es2015');
 const uglify = require('gulp-uglify'); //压缩js
 const rename = require('gulp-rename'); //重命名
-
 
 
 //压缩html
@@ -21,11 +20,10 @@ gulp.task('uglifyhtml', () => {
 gulp.task('uglifycss', () => {
     return gulp.src('src/css/*.css')
         .pipe(minicss()) //执行压缩插件
-        .pipe(gulp.dest('dist/css')); //输出
+        .pipe(gulp.dest('dist/src/css')); //输出
 })
 
 //压缩图片 png
-
 gulp.task('uglifypng', () => {
     return gulp.src('src/img/*.png')
         .pipe(imagemin({
@@ -36,14 +34,23 @@ gulp.task('uglifypng', () => {
         }))
         .pipe(gulp.dest('dist/src/img'));
 });
+//js压缩
+// gulp.task('uglifyjs', () => {
+//     return gulp.src('src/script/js*.js') //引入文件
+
+//     .pipe(gulp.dest('dist/src/script')); //输出
+// });
+
+
 //es6转es5
 //gulp-babel gulp-core  babel-preset-es2015
 gulp.task('babeljs', () => {
-    return gulp.src('src/script/*.js') //引入文件
+    return gulp.src('src/script/js/*.js') //引入文件
         .pipe(babel({
             presets: ['es2015']
         })) //执行压缩插件
-        .pipe(gulp.dest('dist/src/script')); //输出
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/src/script/js')); //输出
 });
 
 
